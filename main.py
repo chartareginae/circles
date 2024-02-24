@@ -22,8 +22,9 @@ class Example(QMainWindow):
         if self.flag:
             qp = QPainter()
             qp.begin(self)
-            qp.setPen(QColor('yellow'))
-            qp.setBrush(QColor('yellow'))
+            r, g, b = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+            qp.setPen(QColor(r, g, b))
+            qp.setBrush(QColor(r, g, b))
             qp.drawEllipse(random.randint(100, 680 - 100), random.randint(100, 480 - 100), self.size, self.size)
             qp.end()
 
